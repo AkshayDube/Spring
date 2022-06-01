@@ -1,4 +1,4 @@
-package com.Spring.demo;
+package com.Spring.demo.dependencyInjection;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -12,6 +12,8 @@ public class App {
 		Coach obj=context.getBean("coach",Coach.class);
 		
 		System.out.println(obj.getDailyWorkout());
+		System.out.println(obj.getDailyFortune());
+	
 
 	}
 
