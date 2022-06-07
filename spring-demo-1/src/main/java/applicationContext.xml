@@ -15,7 +15,7 @@
     <bean id="fortuneService" class="com.Spring.demo.dependencyInjection.HappyFortuneService" />
     
     <!-- Bean for CoachInfo -->
-    <bean id="coachinfo" class="com.Spring.demo.dependencyInjection.CoachInfo" >
+    <bean id="info" class="com.Spring.demo.dependencyInjection.CoachInfo" >
     <property name="name" value="${coach.name}"/>
     <property name="experience" value="${coach.experience}" />
     </bean>
@@ -23,9 +23,9 @@
      <!-- Bean Coach (can provide Class football as well to obtain football coach) -->
     <bean id="coach" class="com.Spring.demo.dependencyInjection.FootballCoach" 
     init-method="doCrazyStart" destroy-method="doCrazyStop"
-    scope="prototype">
+    scope="prototype" autowire="byName">
     <constructor-arg ref="fortuneService" />
-    <property name="info" ref="coachinfo"/>
+    <!-- <property name="info" ref="coachinfo"/> -->
     </bean>
     
 </beans>    
