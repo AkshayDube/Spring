@@ -21,10 +21,11 @@
     </bean>
     
      <!-- Bean Coach (can provide Class football as well to obtain football coach) -->
-    <bean id="coach" class="com.Spring.demo.dependencyInjection.FootballCoach">
+    <bean id="coach" class="com.Spring.demo.dependencyInjection.FootballCoach" 
+    init-method="doCrazyStart" destroy-method="doCrazyStop"
+    scope="prototype">
     <constructor-arg ref="fortuneService" />
     <property name="info" ref="coachinfo"/>
     </bean>
     
-    <bean id="test" class="com.Spring.demo.dependencyInjection.Test" init-method="doSome" destroy-method="doFinishSome"/>
 </beans>    

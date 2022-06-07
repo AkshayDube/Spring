@@ -15,5 +15,11 @@ public class App {
 		System.out.println(obj.getDailyFortune());
 		System.out.println(obj.getCoachInfo());
 		
+		Coach obj2=context.getBean("coach",Coach.class);
+	
+		boolean isSame=(obj==obj2);
+		System.out.println("Are object same : " + isSame);
+		
+		context.close();
 	}
 }

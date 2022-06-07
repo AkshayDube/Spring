@@ -30,5 +30,14 @@ public class FootballCoach implements Coach {
 		return "Coach Name : "+info.getName() + "\nCoach Experience : "+info.getExperience()+" years" ;
 	}
 
+	//init-method
+		public void doCrazyStart(){
+			System.out.println("----------------------Starting Crazy Kiya Re---------------------------");
+		}
+		
+		//destroy-method
+		public void doCrazyStop() {
+			System.out.println("--------------------------Stopping Crazy Kiya Re ----------------------");
+		}
 	
 }
