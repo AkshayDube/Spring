@@ -25,4 +25,6 @@
     <constructor-arg ref="fortuneService" />
     <property name="info" ref="coachinfo"/>
     </bean>
+    
+    <bean id="test" class="com.Spring.demo.dependencyInjection.Test" init-method="doSome" destroy-method="doFinishSome"/>
 </beans>    
