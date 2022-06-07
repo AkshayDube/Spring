@@ -8,13 +8,16 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <!-- Loading property file to read data -->
+    <context:property-placeholder location="Coach.properties" />
+    
     <!-- Bean for FortuneService -->
     <bean id="fortuneService" class="com.Spring.demo.dependencyInjection.HappyFortuneService" />
     
     <!-- Bean for CoachInfo -->
     <bean id="coachinfo" class="com.Spring.demo.dependencyInjection.CoachInfo" >
-    <property name="name" value="Rahul Dravid"/>
-    <property name="experience" value="10" />
+    <property name="name" value="${coach.name}"/>
+    <property name="experience" value="${coach.experience}" />
     </bean>
     
      <!-- Bean Coach (can provide Class football as well to obtain football coach) -->
