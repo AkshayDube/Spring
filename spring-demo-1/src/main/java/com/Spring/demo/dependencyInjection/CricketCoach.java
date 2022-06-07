@@ -4,6 +4,8 @@ public class CricketCoach implements Coach {
 
 	private FortuneService fortuneService;
 	
+	private CoachInfo info;
+	
 	@Override
 	public String getDailyWorkout() {
 		return "Spend 1 hour daily on Cricket Practice";
@@ -18,4 +20,12 @@ public class CricketCoach implements Coach {
 		return fortuneService.getFortune();
 	}
 	
+	public void setInfo(CoachInfo info) {
+		this.info=info;
+	}
+	
+	@Override
+	public String getCoachInfo() {
+		return "Coach Name : "+info.getName() + "\nCoach Experience : "+info.getExperience()+" years" ;
+	}
 }

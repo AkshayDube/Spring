@@ -13,6 +13,8 @@ public class App {
 		
 		System.out.println(obj.getDailyWorkout());
 		System.out.println(obj.getDailyFortune());
+		System.out.println(obj.getCoachInfo());
+
 	
 
 	}
